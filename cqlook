@@ -1,17 +1,19 @@
 #!/usr/bin/perl
 
+
+#####################
+#note, "words" is the local dictionary file.
+#       cmx is the personal commmand directory 
+
 if (defined $ARGV[0]){
 foreach $i (@ARGV){
-        system "grep \"^$i\$\" ~joela/cmx/words";
+        system "grep \"^$i\$\" ~/cmx/words";
 }
 }else{
 printf "?  ";
 while (<STDIN>){
 chomp;
-        system "grep \"^$_\$\" ~joela/cmx/words";
+        system "grep \"^$_\$\" ~/cmx/words";
 printf "?  ";
 }
 }
-
-
-#note, "words" is the local dictionary file.
