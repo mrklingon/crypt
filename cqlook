@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+
+if (defined $ARGV[0]){
+foreach $i (@ARGV){
+        system "grep \"^$i\$\" ~joela/cmx/words";
+}
+}else{
+printf "?  ";
+while (<STDIN>){
+chomp;
+        system "grep \"^$_\$\" ~joela/cmx/words";
+printf "?  ";
+}
+}
+
+
+#note, "words" is the local dictionary file.
