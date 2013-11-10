@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+
+
+(@ltrs) = split(/ */,$ARGV[0]);
+#print join ':', split / */, $ARGV[0];
+foreach $i (@ltrs){
+        $CMD = "$CMD grep -i $i |";
+                $BLNK = "$BLNK.";
+}
+
+
+$CMD = "cqlook $BLNK| $CMD";
+
+printf "$CMD\n";
+
+printf "OUTPUT FROM JMLOOK\n--------------------\n";
+open (OUT,$CMD);
+while (<OUT>){
+        printf $_;
+}
