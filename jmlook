@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+################
+# note: requires cqlook in the search path
+
 
 (@ltrs) = split(/ */,$ARGV[0]);
 #print join ':', split / */, $ARGV[0];
